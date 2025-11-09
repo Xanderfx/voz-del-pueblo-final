@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voz del Pueblo - Foro Democrático</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Fondo Animado Premium -->
+  <div class="bg-animation">
+    <div class="gradient-ball ball-1"></div>
+    <div class="gradient-ball ball-2"></div>
+    <div class="gradient-ball ball-3"></div>
+    <div class="grid-pattern"></div>
+  </div>
+
+  <div class="app-wrapper">
+    <!-- Header Épico -->
+    <header class="hero-header">
+      <div class="logo-master">
+        <div class="logo-orb">
+          <i class="fas fa-users"></i>
+          <div class="orb-glow"></div>
+        </div>
+        <div class="logo-content">
+          <h1 class="logo-title">VOZ DEL PUEBLO</h1>
+          <p class="logo-subtitle">Foro Democrático Dominicano</p>
+        </div>
+      </div>
+      <div class="header-ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-dot"></div>
+        <div class="ornament-line"></div>
+      </div>
+    </header>
+
+    <!-- Card de Autenticación Premium -->
+    <div id="auth" class="auth-master">
+      <div class="auth-card-glass">
+        <!-- Navegación Épica -->
+        <div class="nav-tabs">
+          <div class="tab-buttons">
+            <button class="nav-btn active" data-tab="login">
+              <div class="btn-glow"></div>
+              <i class="fas fa-sign-in-alt"></i>
+              <span>Iniciar Sesión</span>
+            </button>
+            <button class="nav-btn" data-tab="registro">
+              <div class="btn-glow"></div>
+              <i class="fas fa-user-plus"></i>
+              <span>Registrarse</span>
+            </button>
+          </div>
+          <div class="nav-indicator"></div>
+        </div>
+
+        <!-- Formulario Login -->
+        <form id="loginForm" class="form-panel active">
+          <div class="form-hero">
+            <h3>Bienvenido de vuelta</h3>
+            <p>Accede a tu cuenta para continuar el debate</p>
+          </div>
+          
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="Correo electrónico" required />
+            <div class="field-underline"></div>
+          </div>
+          
+          <div class="input-field password">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required />
+            <div class="field-underline"></div>
+            <button type="button" class="eye-toggle" onclick="togglePass('loginPassword')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+
+          <div class="form-utils">
+            <label class="check-field">
+              <input type="checkbox" id="rememberMe">
+              <span class="check-box"></span>
+              Recordar sesión
+            </label>
+            <a href="#" class="link-util">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn-epic">
+            <span>Acceder al Foro</span>
+            <div class="btn-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="btn-shine"></div>
+          </button>
+        </form>
+
+        <!-- Formulario Registro -->
+        <form id="registroForm" class="form-panel">
+          <div class="form-hero">
+            <h3>Únete a la conversación</h3>
+            <p>Crea tu cuenta para participar en el foro</p>
+          </div>
+          
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" id="nombre" placeholder="Nombre completo" required />
+            <div class="field-underline"></div>
+          </div>
+          
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="registroEmail" placeholder="Correo electrónico" required />
+            <div class="field-underline"></div>
+          </div>
+          
+          <div class="input-field password">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="registroPassword" placeholder="Contraseña (6+ caracteres)" required />
+            <div class="field-underline"></div>
+            <button type="button" class="eye-toggle" onclick="togglePass('registroPassword')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+
+          <div class="password-meter">
+            <div class="meter-bar">
+              <div class="meter-fill" data-strength="0"></div>
+            </div>
+            <span class="meter-text">Seguridad de la contraseña</span>
+          </div>
+
+          <div class="form-utils">
+            <label class="check-field">
+              <input type="checkbox" id="acceptTerms" required>
+              <span class="check-box"></span>
+              Acepto los <a href="#">términos</a> y <a href="#">privacidad</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-epic">
+            <span>Crear Cuenta</span>
+            <div class="btn-arrow">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="btn-shine"></div>
+          </button>
+
+          <div class="features-showcase">
+            <div class="feature-card">
+              <i class="fas fa-comments"></i>
+              <span>Debates Activos</span>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-chart-line"></i>
+              <span>Estadísticas</span>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <span>Comunidad Segura</span>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-bell"></i>
+              <span>Notificaciones</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Notificación Toast -->
+    <div id="toast" class="toast-message"></div>
+
+    <!-- Sección App -->
+    <div id="app" class="app-interface">
+      <nav class="app-bar">
+        <div class="user-profile">
+          <div class="avatar-circle">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="user-info">
+            <span id="userName" class="user-name"></span>
+            <span class="user-status">Conectado</span>
+          </div>
+        </div>
+        <button onclick="logout()" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Cerrar Sesión</span>
+        </button>
+      </nav>
+
+      <div class="main-content">
+        <div class="content-hero">
+          <h2>Foro de Discusión</h2>
+          <p>Participa en los debates más relevantes de la comunidad</p>
+        </div>
+        <div id="categorias-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
